@@ -1,0 +1,13 @@
+First of all, Thank to the channel :  https://www.youtube.com/watch?v=ccsz9FRy-nk&list=PLC3y8-rFHvwgeQIfSDtEGVvvSEPDkL_1f 
+
+i just follow all of this video.
+
+
+
+-> recommend extension : Vue VSCode Snippets
+- vbase-3 (enter)
+
+---------------------------------------------------------
+=> Syntax that i used for commit to git hub account 
+T1 = tutorial 1
+
