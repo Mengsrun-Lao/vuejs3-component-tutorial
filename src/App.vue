@@ -1,20 +1,17 @@
 <template>
-  <Greet name="Mengsrun-Lao"  heroName="Bun-Meng && Sok-Ny"/>
-  <Greet name="Mengsrean-Lao" heroName="Bun-Meng && Sok-Ny"/>
-  <Greet name="Mengheang-Lao" heroName="Bun-Meng && Sok-Ny"/>
-  <Greet name="Mehghong-Lao"  heroName="Bun-Meng && Sok-Ny"/>
-  <Greet :name="name"     :heroName="channel"/>
+ 
+  <Article title="titile is string type" :like="40" :isPublised="true" />
 
 </template>
 
 <script>
-import Greet from './components/Greet.vue';
- 
+
+import Article from './components/Article.vue';
 
 export default {
   name: 'App',
   components: {
-    Greet,
+    Article,
   },
   data(){
     return{
