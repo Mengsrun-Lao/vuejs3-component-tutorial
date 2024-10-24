@@ -1,17 +1,18 @@
 <template>
  
-  <Article id="my-attribute" title="titile is string type" :like="40" :isPublised="true" />
+
+  <ComponentC/>
 
 </template>
 
 <script>
 
-import Article from './components/Article.vue';
+import ComponentC from './components/ComponentC.vue';
 
 export default {
   name: 'App',
   components: {
-    Article,
+    ComponentC,
   },
   data(){
     return{
