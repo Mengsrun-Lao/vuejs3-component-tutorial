@@ -1,5 +1,10 @@
 <template>
-  <Greet/>
+  <Greet name="Mengsrun-Lao"  heroName="Bun-Meng && Sok-Ny"/>
+  <Greet name="Mengsrean-Lao" heroName="Bun-Meng && Sok-Ny"/>
+  <Greet name="Mengheang-Lao" heroName="Bun-Meng && Sok-Ny"/>
+  <Greet name="Mehghong-Lao"  heroName="Bun-Meng && Sok-Ny"/>
+  <Greet :name="name"     :heroName="channel"/>
+
 </template>
 
 <script>
@@ -10,6 +15,12 @@ export default {
   name: 'App',
   components: {
     Greet,
+  },
+  data(){
+    return{
+      name:'Mengxing',
+      channel:'Ting-Ting'
+    }
   }
 }
 </script>
