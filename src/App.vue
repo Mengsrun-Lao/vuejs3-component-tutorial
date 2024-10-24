@@ -1,6 +1,6 @@
 <template>
  
-  <Article title="titile is string type" :like="40" :isPublised="true" />
+  <Article id="my-attribute" title="titile is string type" :like="40" :isPublised="true" />
 
 </template>
 
