@@ -1,23 +1,30 @@
 <template>
  
-
-  <ComponentC/>
-
+ <button :style="{color:'blue'}" @click="showPopup=true">Show Popup Component</button>
+  <Popup  v-show="showPopup" @close="closePopup"/>
+  
 </template>
 
 <script>
+import Popup from './components/Popup.vue';
 
-import ComponentC from './components/ComponentC.vue';
+
+ 
 
 export default {
   name: 'App',
   components: {
-    ComponentC,
+    Popup,
   },
   data(){
     return{
-      name:'Mengxing',
-      channel:'Ting-Ting'
+      showPopup: false,
+    }
+  },
+  methods:{
+    closePopup(name){
+      this.showPopup= false,
+      console.log('value from the child component is : ',name)
     }
   }
 }
