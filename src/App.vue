@@ -1,30 +1,28 @@
 <template>
- 
- <button :style="{color:'blue'}" @click="showPopup=true">Show Popup Component</button>
-  <Popup  v-show="showPopup" @close="closePopup"/>
   
+
+  <Input v-model="name" @input="showLogConsole"/>
+
+
 </template>
 
 <script>
-import Popup from './components/Popup.vue';
+import Input from './components/Input.vue';
 
-
- 
 
 export default {
   name: 'App',
   components: {
-    Popup,
+    Input
   },
   data(){
-    return{
-      showPopup: false,
+    return {
+      name:''
     }
   },
-  methods:{
-    closePopup(name){
-      this.showPopup= false,
-      console.log('value from the child component is : ',name)
+  methods:{ 
+    showLogConsole(){
+      console.log(this.name)
     }
   }
 }
