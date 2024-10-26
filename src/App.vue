@@ -1,29 +1,21 @@
 <template>
- 
-  <NameList v-slot:default="slotProps">
-    {{ slotProps.firstName }} && {{ slotProps.lastName }}
-  </NameList>
 
-  <NameList v-slot:default="slotProps">
-    {{ slotProps.lastName }} && {{ slotProps.firstName }}
-  </NameList>
-
-  <NameList v-slot:default="slotProps">
-    {{ slotProps.firstName }} && {{ slotProps.firstName }}
-  </NameList>
-
+  <h4>App component Text</h4>
+  <ChildStyle>
+    <h4>Testing the child componen</h4>
+  </ChildStyle>
 
 </template>
 
 <script>
-import NameList from './components/NameList.vue';
+import ChildStyle from './components/ChildStyle.vue';
 
 
 
 export default {
   name: 'App',
   components: {
-    NameList,
+      ChildStyle
   },
   data(){
     return {
@@ -44,6 +36,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+h4 {
+  color: red;
 }
 </style>
 
