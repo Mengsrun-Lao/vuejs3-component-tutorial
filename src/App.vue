@@ -1,29 +1,34 @@
 <template>
 
-  <button @click="setValue('componentA')">Button A</button>
-  <button @click="setValue('componentB')">Button B</button>
-  <button @click="setValue('componentC')">Button C</button> 
 
-  <Tab :class="styleSlot"> 
-    {{value}}
-  </Tab>
+  <button @click="activeTab='TabA'">Tab A</button>
+  <button @click="activeTab='TabB'">Tab B</button>
+  <button @click="activeTab='TabC'">TaB C</button>
 
+  <component :is="activeTab"/>
 
 
 </template>
 
 <script>
-import Tab from './components/Tabs.vue';
+import TabA from './components/TabA.vue';
+import TabB from './components/TabB.vue';
+import TabC from './components/TabC.vue';
+
+
 
  
 export default {
   name: 'App',
   components: {
-      Tab  
+    TabA,
+    TabB,
+    TabC
   },
   data(){
     return {
-      value:' '
+      value:' ',
+      activeTab: 'TabA'
     }
   },
   methods:{
@@ -31,14 +36,7 @@ export default {
       this.value = component ;
     },
   },
-  computed:{
-    styleSlot(){
-      return {
-        'style-A': this.value === 'componentA',
-        'style-B': this.value === 'componentB',
-        'style-C': this.value === 'componentC',
-      }
-    }
+  computed:{ 
   }
 }
 </script>

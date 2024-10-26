@@ -1,20 +1,15 @@
 <template>
-    <div >
-        <slot>The default slot</slot>
+    <div>
+       <h3>This is the Tab A is working</h3>
     </div>
 </template>
 
-
 <script>
     export default {
-        name:'tab-component',
-         
-
+        name:'tabA-component'
     }
 </script>
 
 <style scoped>
-
- 
 
 </style>
