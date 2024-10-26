@@ -1,28 +1,45 @@
 <template>
 
-  <h4>App component Text</h4>
-  <ChildStyle>
-    <h4>Testing the child componen</h4>
-  </ChildStyle>
+  <button @click="setValue('componentA')">Button A</button>
+  <button @click="setValue('componentB')">Button B</button>
+  <button @click="setValue('componentC')">Button C</button> 
+
+  <Tab :class="styleSlot"> 
+    {{value}}
+  </Tab>
+
+
 
 </template>
 
 <script>
-import ChildStyle from './components/ChildStyle.vue';
+import Tab from './components/Tabs.vue';
 
-
-
+ 
 export default {
   name: 'App',
   components: {
-      ChildStyle
+      Tab  
   },
   data(){
     return {
-      
+      value:' '
     }
   },
-  methods:{}
+  methods:{
+    setValue(component){
+      this.value = component ;
+    },
+  },
+  computed:{
+    styleSlot(){
+      return {
+        'style-A': this.value === 'componentA',
+        'style-B': this.value === 'componentB',
+        'style-C': this.value === 'componentC',
+      }
+    }
+  }
 }
 </script>
 
@@ -37,9 +54,19 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-h4 {
+
+.style-A{
   color: red;
+  font-style: italic;
+  font-weight: bold;
 }
+.style-B{
+  color: blue;
+}
+.style-C{
+  color: green;
+}
+ 
 </style>
 
 
