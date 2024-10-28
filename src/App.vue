@@ -5,7 +5,9 @@
   <button @click="activeTab='TabB'">Tab B</button>
   <button @click="activeTab='TabC'">TaB C</button>
 
-  <component :is="activeTab"/>
+  <keep-alive>
+    <component :is="activeTab"/>
+  </keep-alive>
 
 
 </template>
