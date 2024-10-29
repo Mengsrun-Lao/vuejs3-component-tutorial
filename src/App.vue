@@ -1,21 +1,16 @@
 <template>
 
-
-  <button @click="activeTab='TabA'">Tab A</button>
-  <button @click="activeTab='TabB'">Tab B</button>
-  <button @click="activeTab='TabC'">TaB C</button>
-
-  <keep-alive>
-    <component :is="activeTab"/>
-  </keep-alive>
+  <ClickCounter/>
+  <Hovercounter/>
 
 
 </template>
 
 <script>
-import TabA from './components/TabA.vue';
-import TabB from './components/TabB.vue';
-import TabC from './components/TabC.vue';
+import ClickCounter from './components/ClickCounter.vue';
+import Hovercounter from './components/Hovercounter.vue';
+
+ 
 
 
 
@@ -23,20 +18,15 @@ import TabC from './components/TabC.vue';
 export default {
   name: 'App',
   components: {
-    TabA,
-    TabB,
-    TabC
+    ClickCounter,
+    Hovercounter
+ 
   },
   data(){
     return {
-      value:' ',
-      activeTab: 'TabA'
     }
   },
   methods:{
-    setValue(component){
-      this.value = component ;
-    },
   },
   computed:{ 
   }
