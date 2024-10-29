@@ -1,21 +1,13 @@
 <template>
 
-
-  <button @click="activeTab='TabA'">Tab A</button>
-  <button @click="activeTab='TabB'">Tab B</button>
-  <button @click="activeTab='TabC'">TaB C</button>
-
-  <keep-alive>
-    <component :is="activeTab"/>
-  </keep-alive>
-
-
+  <TemplateRef/> 
+  
 </template>
 
 <script>
-import TabA from './components/TabA.vue';
-import TabB from './components/TabB.vue';
-import TabC from './components/TabC.vue';
+import TemplateRef from './components/TemplateRef.vue';
+
+ 
 
 
 
@@ -23,9 +15,7 @@ import TabC from './components/TabC.vue';
 export default {
   name: 'App',
   components: {
-    TabA,
-    TabB,
-    TabC
+    TemplateRef,
   },
   data(){
     return {
