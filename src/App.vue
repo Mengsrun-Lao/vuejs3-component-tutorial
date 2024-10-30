@@ -1,11 +1,19 @@
 <template>
 
-  <Data/>
+  <h2>using for  Reactivity </h2>
+  <DemoOne/> <br><br>
+
+
+  <h2>Using with toRef</h2>
+  <DemoTwo/>
+
+  
 
 </template>
 
 <script>
-import Data from './components/Data.vue';
+import DemoOne from './components/demoOne.vue';
+import DemoTwo from './components/demoTwo.vue';
 
  
  
@@ -16,7 +24,8 @@ import Data from './components/Data.vue';
 export default {
   name: 'App',
   components: {
-    Data
+    DemoOne,
+    DemoTwo
  
   },
   data(){
