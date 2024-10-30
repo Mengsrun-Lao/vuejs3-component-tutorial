@@ -1,19 +1,14 @@
 <template>
 
-  <h2>using for  Reactivity </h2>
-  <DemoOne/> <br><br>
-
-
-  <h2>Using with toRef</h2>
-  <DemoTwo/>
-
+    <Computed/>
   
 
 </template>
 
 <script>
-import DemoOne from './components/demoOne.vue';
-import DemoTwo from './components/demoTwo.vue';
+import Computed from './components/Computed.vue';
+
+ 
 
  
  
@@ -24,8 +19,8 @@ import DemoTwo from './components/demoTwo.vue';
 export default {
   name: 'App',
   components: {
-    DemoOne,
-    DemoTwo
+    Computed
+ 
  
   },
   data(){
